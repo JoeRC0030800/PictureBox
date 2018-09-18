@@ -51,23 +51,23 @@ namespace WindowsFormsApp1
             for (int i = 0; i < 20; i++)
             {
                 pictureBox1.Location = new Point(pictureBox1.Location.X + 4, pictureBox1.Location.Y);
-                await Task.Delay(50);
+                await Task.Delay(Convert.ToIn
 
             }
             for (int i = 0; i < 20; i++)
             {
                 pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 4);
-                await Task.Delay(50);
+                await Task.Delay(Convert.ToInt32(textBox1.Text));
             }
             for (int i = 0; i < 20; i++)
             {
                 pictureBox1.Location = new Point(pictureBox1.Location.X - 4, pictureBox1.Location.Y);
-                await Task.Delay(50);
+                await Task.Delay(Convert.ToInt32(textBox1.Text));
             }
             for (int i = 0; i < 20; i++)
             {
                 pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y - 4);
-                await Task.Delay(50);
+                await Task.Delay(Convert.ToInt32(textBox1.Text));
             }
         }
 
