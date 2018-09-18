@@ -26,9 +26,38 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < 20; i++)
             {
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 4, pictureBox1.Location.Y+4);
+                await Task.Delay(50);
+                
+            }
+            for (int i = 0; i < 40; i++)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X - 4, pictureBox1.Location.Y);
+                await Task.Delay(50);
+            }
+            for (int i = 0; i < 20; i++)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 4, pictureBox1.Location.Y - 4);
+                await Task.Delay(50);
+               
+            }
+
+
+
+        }
+
+        private async void button2_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 20; i++)
+            {
                 pictureBox1.Location = new Point(pictureBox1.Location.X + 4, pictureBox1.Location.Y);
                 await Task.Delay(50);
+
+            }
+            for (int i = 0; i < 20; i++)
+            {
                 pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 4);
+                await Task.Delay(50);
             }
             for (int i = 0; i < 20; i++)
             {
@@ -39,11 +68,18 @@ namespace WindowsFormsApp1
             {
                 pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y - 4);
                 await Task.Delay(50);
-                pictureBox1.Location = new Point(pictureBox1.Location.X + 4, pictureBox1.Location.Y);
             }
-
-
-
         }
+
+        private async void button3_Click(object sender, EventArgs e)
+        {
+            while (pictureBox1.Location.X + 5 < ClientRectangle.Width - pictureBox1.Width)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 5, pictureBox1.Location.Y);
+                await Task.Delay(100);
+            }
+            }
+                
+        
     }
 }
