@@ -27,18 +27,18 @@ namespace WindowsFormsApp1
             for (int i = 0; i < 20; i++)
             {
                 pictureBox1.Location = new Point(pictureBox1.Location.X + 4, pictureBox1.Location.Y+4);
-                await Task.Delay(50);
+                await Task.Delay(Convert.ToInt32(textBox2.Text));
                 
             }
             for (int i = 0; i < 40; i++)
             {
                 pictureBox1.Location = new Point(pictureBox1.Location.X - 4, pictureBox1.Location.Y);
-                await Task.Delay(50);
+                await Task.Delay(Convert.ToInt32(textBox2.Text));
             }
             for (int i = 0; i < 20; i++)
             {
                 pictureBox1.Location = new Point(pictureBox1.Location.X + 4, pictureBox1.Location.Y - 4);
-                await Task.Delay(50);
+                await Task.Delay(Convert.ToInt32(textBox2.Text));
                
             }
 
@@ -51,7 +51,7 @@ namespace WindowsFormsApp1
             for (int i = 0; i < 20; i++)
             {
                 pictureBox1.Location = new Point(pictureBox1.Location.X + 4, pictureBox1.Location.Y);
-                await Task.Delay(Convert.ToIn
+                await Task.Delay(Convert.ToInt32(textBox1.Text));
 
             }
             for (int i = 0; i < 20; i++)
@@ -76,7 +76,7 @@ namespace WindowsFormsApp1
             while (pictureBox1.Location.X + 5 < ClientRectangle.Width - pictureBox1.Width)
             {
                 pictureBox1.Location = new Point(pictureBox1.Location.X + 5, pictureBox1.Location.Y);
-                await Task.Delay(100);
+                await Task.Delay(Convert.ToInt32(textBox3.Text));
             }
             }
                 
