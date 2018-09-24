@@ -82,11 +82,14 @@ namespace WindowsFormsApp1
 
         private async void button4_Click(object sender, EventArgs e)
         {
-            while (pictureBox1.Location.Y + 5 < ClientRectangle.Width - pictureBox1.Width)
+            try
             {
-                pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 5);
-                await Task.Delay(Convert.ToInt32(textBox4.Text));
-            }
+                while (pictureBox1.Location.Y + 5 < ClientRectangle.Width - pictureBox1.Width)
+                {
+                    pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 5);
+                    await Task.Delay(Convert.ToInt32(textBox4.Text));
+                    
+                }
         }
     }
 }
