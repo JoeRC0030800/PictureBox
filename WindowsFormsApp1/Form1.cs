@@ -26,9 +26,9 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < 20; i++)
             {
-                pictureBox1.Location = new Point(pictureBox1.Location.X + 4, pictureBox1.Location.Y+4);
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 4, pictureBox1.Location.Y + 4);
                 await Task.Delay(Convert.ToInt32(textBox2.Text));
-                
+
             }
             for (int i = 0; i < 40; i++)
             {
@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
             {
                 pictureBox1.Location = new Point(pictureBox1.Location.X + 4, pictureBox1.Location.Y - 4);
                 await Task.Delay(Convert.ToInt32(textBox2.Text));
-               
+
             }
 
 
@@ -47,6 +47,7 @@ namespace WindowsFormsApp1
         }
 
         private async void button2_Click(object sender, EventArgs e)
+  
         {
             for (int i = 0; i < 20; i++)
             {
@@ -73,23 +74,51 @@ namespace WindowsFormsApp1
 
         private async void button3_Click(object sender, EventArgs e)
         {
-            while (pictureBox1.Location.X + 5 < ClientRectangle.Width - pictureBox1.Width)
+            int d;
+            try
             {
-                pictureBox1.Location = new Point(pictureBox1.Location.X + 5, pictureBox1.Location.Y);
-                await Task.Delay(Convert.ToInt32(textBox3.Text));
+                d = (Convert.ToInt32(textBox3.Text));
             }
+              catch
+            {
+                MessageBox.Show("enter a whole number");
+                d = 10;
+
+                while (pictureBox1.Location.X + 5 < ClientRectangle.Width - pictureBox1.Width)
+                {
+                    pictureBox1.Location = new Point(pictureBox1.Location.X + 5, pictureBox1.Location.Y);
+                    await Task.Delay(d);
+                }
+            
             }
+        }
 
         private async void button4_Click(object sender, EventArgs e)
         {
-            try
+
+            
             {
                 while (pictureBox1.Location.Y + 5 < ClientRectangle.Width - pictureBox1.Width)
                 {
                     pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 5);
-                    await Task.Delay(Convert.ToInt32(textBox4.Text));
-                    
+                    await Task.Delay(Convert.ToInt32(textBox4.Text)); ;
                 }
-        }
+                {
+
+                }
+            }
+            }
     }
 }
+                
+               
+
+
+                    
+            
+                    
+                    
+                
+        
+    
+
